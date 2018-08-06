@@ -3,7 +3,7 @@
   Plugin Name: Form Name AddOn
   Plugin URI: https://www.gravityaddons.com/
   Description: Updates the form tag of Gravity Forms to include the name of the form
-  Version: 0.1
+  Version: 0.1.1
   Author: Alquemie
   Author URI: https://www.alquemie.net/
 */
