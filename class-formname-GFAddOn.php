@@ -96,17 +96,8 @@ class FormNameAddOn extends GFAddOn {
         ?>
         <script>
         jQuery( document ).ready(function() {
-            if(jQuery('.gform_confirmation_message').is(":visible"))/* page load */
-            {
-                var formId=jQuery('.gform_confirmation_message').attr('id').replace('gform_confirmation_message_','');
-                var formName = sessionStorage.getItem('gformName');
-                dataLayer.push({'event':'gform.submit.success','GravityFormID':formId,'GravityFormName':formName});
-            }
-
-            jQuery(document).bind('gform_confirmation_loaded', function(event, formId) {
-                var formName = sessionStorage.getItem('gformName');
-                dataLayer.push({'event':'gform.submit.success','GravityFormID':formId,'GravityFormName':formName});
-            });
+            if(jQuery('.gform_confirmation_message').is(":visible")) { var formId=jQuery('.gform_confirmation_message').attr('id').replace('gform_confirmation_message_',''); var formName = sessionStorage.getItem('gformName'); dataLayer.push({'event':'gform.submit.success','GravityFormID':formId,'GravityFormName':formName}); }
+            jQuery(document).bind('gform_confirmation_loaded', function(event, formId) { var formName = sessionStorage.getItem('gformName'); dataLayer.push({'event':'gform.submit.success','GravityFormID':formId,'GravityFormName':formName}); });
         });
         </script>
         <?php
