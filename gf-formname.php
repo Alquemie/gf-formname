@@ -6,6 +6,7 @@
   Version: 0.2.0
   Author: Alquemie
   Author URI: https://www.alquemie.net/
+  License: GPL-3.0+
 */
 
 if ( ! class_exists( 'GFForms' ) ) {
